@@ -5,6 +5,7 @@ import registerServiceWorker from './registerServiceWorker'
 
 import './index.css'
 import './css/navigation.css'
+import './css/editview.css'
 
 import store from './store'
 import { Provider } from 'react-redux'

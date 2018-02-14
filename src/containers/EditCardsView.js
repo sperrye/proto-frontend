@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import EditLeftSidebar from './EditLeftSidebar'
+import EditRightSidebar from './EditRightSidebar'
+import EditCenterMain from './EditCenterMain'
+import EditCenterCarousel from './EditCenterCarousel'
 
 class EditCardsView extends Component {
 
@@ -8,8 +12,13 @@ class EditCardsView extends Component {
 
   render () {
     return (
-      <div>hiya, this is the edit cards view
-
+      <div className="edit-cards-view-container">
+        <EditLeftSidebar />
+        <div className="edit-center-container">
+          <EditCenterMain />
+          <EditCenterCarousel />
+        </div>
+        <EditRightSidebar />
       </div>
     )
   }

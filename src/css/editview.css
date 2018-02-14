@@ -1,0 +1,45 @@
+/*GENERAL LAYOUT*/
+.edit-cards-view-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.edit-left-sidebar-container,
+.edit-right-sidebar-container {
+  /*background-color: pink;*/
+  width: 20%;
+}
+
+.edit-center-container {
+  background-color: #535353;
+  width: 60%;
+}
+
+.edit-center-carousel-container {
+  background-color: #757575;
+}
+
+/*GENERAL STYLE*/
+.local-action {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #4A90E2;
+}
+
+.local-action > i, .card-list-item > i {
+  font-size: 1em;
+  margin-right: 0.2em;
+}
+
+/*LEFT SIDEBAR*/
+.card-list-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+
+.selected-card-list-item {
+  background-color: #D9EBFF;
+}
