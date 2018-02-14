@@ -7,7 +7,8 @@ const EditLeftSidebar = () => {
     <div className=" edit-left-sidebar-container">
 
       <div className="m-1 card-filter">
-        <p>List of tags...</p>
+        <h3>Filter cards by tags</h3>
+        <p className="mtb-1">List of tags...</p>
         <div className="local-action">
           <i class="material-icons">close</i>
           <span>Clear Filters</span>
@@ -42,7 +43,7 @@ const EditLeftSidebar = () => {
           <i class="material-icons">content_copy</i>
           <span>Card Name</span>
         </div>
-        <div className="card-list-item selected-card-list-item">
+        <div className="card-list-item selected-list-item">
           <i class="material-icons">content_copy</i>
           <span>Card Name</span>
         </div>

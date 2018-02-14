@@ -28,18 +28,75 @@
   color: #4A90E2;
 }
 
-.local-action > i, .card-list-item > i {
+.local-action > i,
+.card-list-item > i,
+.symbol-list-item > i {
   font-size: 1em;
   margin-right: 0.2em;
 }
 
-/*LEFT SIDEBAR*/
-.card-list-item {
+.card-list-item,
+.symbol-list-item {
   display: flex;
   align-items: center;
   padding: 0.5em 1em;
 }
 
-.selected-card-list-item {
+.selected-list-item {
   background-color: #D9EBFF;
+}
+
+input {
+  border: 1px solid #D8D8D8;
+  border-radius: 2px;
+  text-align: center;
+  width: 100%;
+  height: 2em;
+}
+
+.horizontal-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.horizontal-input > h3,
+.horizontal-input > input {
+  width: 50%;
+}
+
+.two-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.two-buttons > button {
+  width: 45%;
+}
+
+.sm-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 2em;
+  border: none;
+  border-radius: 2px;
+  background-color: #4A90E2;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.sm-btn > i {
+  font-size: 18px;
+}
+
+.input-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-add > i {
+  margin-left: 0.2em;
+  color: #4A90E2;
 }

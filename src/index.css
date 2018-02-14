@@ -8,8 +8,18 @@ body {
   font-family: sans-serif;
 }
 
+p, h1, h2, h3, h4, a {
+  margin: 0em;
+}
+
 div, p {
   font-family: 'Karla', sans-serif;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-family: 'Yantramanav', sans-serif;
+  margin-bottom: 0.2em;
 }
 
 .divider {
