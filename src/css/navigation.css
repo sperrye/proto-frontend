@@ -21,6 +21,10 @@ nav {
   cursor: pointer;
 }
 
+.project-name {
+  user-select: none;
+}
+
 .project-menu {
   width: 300px;
   position: absolute;
@@ -49,4 +53,8 @@ nav {
 
 #uploadCSV:hover, #downloadCSV:hover {
   background-color: #e6f1ff;
+}
+
+.hide {
+  display: none;
 }
