@@ -19,6 +19,7 @@ nav {
 .project-name-wrapper {
   display: flex;
   cursor: pointer;
+  padding: 0.5em;
 }
 
 .project-name {
