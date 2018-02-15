@@ -4,7 +4,12 @@ import { connect } from 'react-redux'
 
 const EditCenterMain = () => {
   return (
-    <div className="edit-center-main-container">center main</div>
+
+      <div className="current-card-wrapper">
+        <div className="current-card"></div>
+        <div className="mtb-1 txt-ctr">Card Name</div>
+      </div>
+
   )
 }
 

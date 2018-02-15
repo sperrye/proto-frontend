@@ -8,6 +8,12 @@ body {
   font-family: sans-serif;
 }
 
+html, body, #root,
+.route-wrapper,
+.edit-cards-view-container {
+  height: calc(100% - 10px);
+}
+
 p, h1, h2, h3, h4, a {
   margin: 0em;
 }
@@ -20,6 +26,10 @@ h3 {
   font-size: 1.1em;
   font-family: 'Yantramanav', sans-serif;
   margin-bottom: 0.2em;
+}
+
+.txt-ctr {
+  text-align: center;
 }
 
 .divider {

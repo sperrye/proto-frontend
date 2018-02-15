@@ -16,7 +16,7 @@
   width: 60%;
 }
 
-.edit-center-carousel-container {
+.carousel-container {
   background-color: #757575;
 }
 
@@ -32,7 +32,7 @@
 .card-list-item > i,
 .symbol-list-item > i {
   font-size: 1em;
-  margin-right: 0.2em;
+  margin-right: 0.5em;
 }
 
 .card-list-item,
@@ -99,4 +99,40 @@ input {
 .input-add > i {
   margin-left: 0.2em;
   color: #4A90E2;
+}
+
+.edit-center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-card-wrapper {
+  margin-top: 5em;
+}
+
+.current-card {
+  width: 250px;
+  height: 330px;
+  background-color: #fff;
+}
+
+.carousel-container {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+}
+
+.carousel-card-wrapper {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-card {
+  width: 125px;
+  height: 175px;
+  background-color: #fff;
 }

@@ -9,14 +9,14 @@ import NavBar from './components/shared/NavBar'
 const App = () => (
 
   <Router>
-    <div>
+
       <Route exact path='/' component={ props =>
-        <div>
+        <div className="route-wrapper">
           <NavBar />
           <EditCardsView />
         </div>
       }/>
-    </div>
+
   </Router>
 
 )
