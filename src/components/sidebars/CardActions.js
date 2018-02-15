@@ -7,6 +7,10 @@ const CardActions = ({}) => (
       <span>Select All</span>
     </div>
     <div className="mtb-05 local-action">
+      <i class="material-icons">check_box_outline_blank</i>
+      <span>Unselect All</span>
+    </div>
+    <div className="mtb-05 local-action">
       <i class="material-icons">add</i>
       <span>Add Card</span>
     </div>

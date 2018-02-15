@@ -1,10 +1,10 @@
 import React from 'react'
 
-const FieldText = ({}) => (
+const FieldContent = ({}) => (
   <div className="m-1">
-    <h3>Text</h3>
+    <h3>Content</h3>
     <input type="text" name="fieldText" />
   </div>
 )
 
-export default FieldText
+export default FieldContent

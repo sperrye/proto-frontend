@@ -2,22 +2,29 @@ import React from 'react'
 
 const SymbolList = ({}) => (
   <div>
-    <div className="symbol-list-item">
-      <i class="material-icons">favorite</i>
-      <span>Heart</span>
+    <div className="m-1">
+      <input type="text" name="searchSymbols" placeholder="Search symbols..." />
     </div>
-    <div className="symbol-list-item">
-      <i class="material-icons">favorite</i>
-      <span>Heart</span>
+
+    <div>
+      <div className="symbol-list-item">
+        <i class="material-icons">favorite</i>
+        <span>Heart</span>
+      </div>
+      <div className="symbol-list-item">
+        <i class="material-icons">favorite</i>
+        <span>Heart</span>
+      </div>
+      <div className="symbol-list-item">
+        <i class="material-icons">favorite</i>
+        <span>Heart</span>
+      </div>
+      <div className="symbol-list-item">
+        <i class="material-icons">favorite</i>
+        <span>Heart</span>
+      </div>
     </div>
-    <div className="symbol-list-item selected-list-item">
-      <i class="material-icons">favorite</i>
-      <span>Heart</span>
-    </div>
-    <div className="symbol-list-item">
-      <i class="material-icons">favorite</i>
-      <span>Heart</span>
-    </div>
+
   </div>
 )
 

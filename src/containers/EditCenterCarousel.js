@@ -8,6 +8,12 @@ const EditCenterCarousel = () => {
   return (
     <div className="carousel-container">
       <CarouselCard />
+      <CarouselCard />
+      <CarouselCard />
+      <CarouselCard />
+      <CarouselCard />
+      <CarouselCard />
+      <CarouselCard />
     </div>
   )
 }
