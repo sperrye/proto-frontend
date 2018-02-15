@@ -14,21 +14,13 @@ import SymbolList from '../components/sidebars/SymbolList'
 const EditRightSidebar = () => {
   return (
     <div className="edit-right-sidebar-container">
-
       <CardQuantity />
-
       <CsvColumn />
-
       <CsvFileImportExport />
-
       <FieldTags />
-
       <FieldText />
-
       <SymbolSearchSelect />
-
       <SymbolList />
-
     </div>
   )
 }
