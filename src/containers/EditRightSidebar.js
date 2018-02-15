@@ -1,10 +1,9 @@
 import React from 'react'
-import { bindActionCreators } from 'redux'
+// import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 
 import CardQuantity from '../components/sidebars/CardQuantity'
-import CsvFileImportExport from '../components/sidebars/CsvFileImportExport'
 import FieldProperty from '../components/sidebars/FieldProperty'
 import FieldContent from '../components/sidebars/FieldContent'
 import SymbolList from '../components/sidebars/SymbolList'

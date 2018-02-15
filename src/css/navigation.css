@@ -6,3 +6,47 @@ nav {
   background-color: #e0e0e0;
   height: 40px;
 }
+
+.brand {
+  width: 80px;
+}
+
+.account {
+  width: 80px;
+  text-align: right;
+}
+
+.project-name-wrapper {
+  display: flex;
+  cursor: pointer;
+}
+
+.project-menu {
+  width: 300px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.3);
+}
+
+.project-drop-down {
+  margin-left: 0.5em;
+}
+
+.project-menu-item {
+  padding: 1em;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#uploadCSV, #downloadCSV {
+  transition: 0.25s;
+}
+
+#uploadCSV:hover, #downloadCSV:hover {
+  background-color: #e6f1ff;
+}

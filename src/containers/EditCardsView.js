@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
+// import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import EditLeftSidebar from './EditLeftSidebar'
 import EditRightSidebar from './EditRightSidebar'

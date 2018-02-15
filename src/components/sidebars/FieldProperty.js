@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FieldProperty = ({}) => (
+const FieldProperty = () => (
   <div className="m-1">
     <h3>Field Property</h3>
     <input type="text" name="fieldTag" />

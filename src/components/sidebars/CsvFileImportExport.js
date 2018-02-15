@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CsvFileImportExport = ({}) => (
+const CsvFileImportExport = () => (
   <div className="m-1 csv-file">
     <h3>CSV File</h3>
     <input type="text" name="csvColumn"></input>

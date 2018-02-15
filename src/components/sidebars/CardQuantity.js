@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CardQuantity = ({}) => (
+const CardQuantity = () => (
   <div className="m-1 horizontal-input">
     <h3>Quantity</h3>
     <input type="text" name="quantity"></input>
