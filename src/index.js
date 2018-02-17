@@ -9,6 +9,10 @@ import './css/editview.css'
 
 import store from './store'
 import { Provider } from 'react-redux'
+import { getProjectCards } from './actions'
+
+//here for now; should use project id and load upon opening project
+store.dispatch(getProjectCards())
 
 ReactDOM.render(
   <Provider store={ store }>

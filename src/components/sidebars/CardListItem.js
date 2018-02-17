@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CardListItem = () => (
+const CardListItem = ({ name }) => (
   <div className="card-list-item">
     <i className="material-icons">content_copy</i>
-    <span>Card Name</span>
+    <span>{name}</span>
   </div>
 )
 

@@ -1,23 +1,23 @@
-import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
+import React from 'react'
+// import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import CardListItem from './CardListItem'
 
-class CardList extends Component {
-
-  state = {}
-
-  render () {
-    return <div className="mtb-1 card-list">
-      <CardListItem />
-      <CardListItem />
-      <CardListItem />
+const CardList = ({ projectCards }) => {
+  console.log(projectCards.all, "projectCards");
+  return (
+    <div className="mtb-1 card-list">
+      {projectCards.all.map((el, i) => {
+        return <CardListItem name={el.name} key={i} />
+      })}
     </div>
-  }
+  )
 }
 
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({
+  projectCards: state.projectCards
+})
 
 const mapDispatchToProps = dispatch => ({})
 
