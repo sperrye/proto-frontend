@@ -1,24 +1,27 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import CardListItem from './CardListItem'
 
-const CardList = () => (
-  <div className="mtb-1 card-list">
-    <div className="card-list-item">
-      <i className="material-icons">content_copy</i>
-      <span>Card Name</span>
-    </div>
-    <div className="card-list-item selected-list-item">
-      <i className="material-icons">content_copy</i>
-      <span>Card Name</span>
-    </div>
-    <div className="card-list-item">
-      <i className="material-icons">content_copy</i>
-      <span>Card Name</span>
-    </div>
-    <div className="card-list-item">
-      <i className="material-icons">content_copy</i>
-      <span>Card Name</span>
-    </div>
-  </div>
-)
+class CardList extends Component {
 
-export default CardList
+  state = {}
+
+  render () {
+    return <div className="mtb-1 card-list">
+      <CardListItem />
+      <CardListItem />
+      <CardListItem />
+    </div>
+  }
+}
+
+
+const mapStateToProps = state => ({})
+
+const mapDispatchToProps = dispatch => ({})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CardList)
