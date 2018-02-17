@@ -8,7 +8,7 @@ export function getProjectCards(){
       project_id: 1,
       quantity: 3,
       properties: [
-        { name: 'Health', field_id: 'A', content: 'mighty JSON' },
+        { field_id: 'title', content: 'Mighty JSON' },
         { name: 'Cost', field_id: 'B', content: '2 :coin:' }
       ]
     },
@@ -17,7 +17,7 @@ export function getProjectCards(){
       project_id: 1,
       quantity: 3,
       properties: [
-        { name: 'Health', field_id: 'A', content: 'curly boys' },
+        { field_id: 'title', content: 'Curly Boys' },
         { name: 'Cost', field_id: 'B', content: '5 :coin:' }
       ]
     }
