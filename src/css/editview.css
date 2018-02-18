@@ -1,4 +1,4 @@
-/*GENERAL LAYOUT*/
+/*=====GENERAL LAYOUT=====*/
 .edit-cards-view-container {
   display: flex;
   justify-content: space-between;
@@ -7,7 +7,6 @@
 
 .edit-left-sidebar-container,
 .edit-right-sidebar-container {
-  /*background-color: pink;*/
   width: 20%;
 }
 
@@ -20,12 +19,13 @@
   background-color: #757575;
 }
 
-/*GENERAL STYLE*/
+/*=====GENERAL UI STYLES=====*/
 .local-action {
   display: flex;
   align-items: center;
   text-transform: uppercase;
   color: #4A90E2;
+  cursor: pointer;
 }
 
 .local-action > i,
@@ -101,6 +101,10 @@ input {
   color: #4A90E2;
 }
 
+/*==ACTION AREA==*/
+
+
+/*=====CENTER AREA=====*/
 .edit-center-container {
   display: flex;
   flex-direction: column;
