@@ -1,4 +1,6 @@
 import React from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import { addProjectCard } from '../../actions'
 
 const CardActions = () => {
@@ -44,4 +46,13 @@ const CardActions = () => {
   )
 }
 
-export default CardActions
+const mapStateToProps = state => ({})
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ addProjectCard }, dispatch)
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CardActions)

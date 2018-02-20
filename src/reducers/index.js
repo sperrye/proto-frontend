@@ -1,23 +1,17 @@
 import { combineReducers } from 'redux'
 import { GET_PROJECT_CARDS, ADD_PROJECT_CARD } from '../actions'
 
-function whattheheck(state = { all: [] }, action) {
-  console.log("in WHATTHEHECK reducer");
+function projectCards(state = { all: [] }, action) {
+  console.log("in reducer");
   switch (action.type) {
     case ADD_PROJECT_CARD:
+      console.log("ADD_PROJECT_CARD case");
       return {
         ...state,
         all: action.payload
       }
-    default:
-      return state
-  }
-}
-
-function projectCards(state = { all: [] }, action) {
-  console.log("in reducer");
-  switch (action.type) {
     case GET_PROJECT_CARDS:
+    console.log("GET_PROJECT_CARDS case");
       return {
         ...state,
         all: action.payload
@@ -28,5 +22,5 @@ function projectCards(state = { all: [] }, action) {
 }
 
 export default combineReducers({
-  projectCards, whattheheck
+  projectCards
 })
