@@ -1,5 +1,4 @@
 import React from 'react'
-// import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import CardListItem from './CardListItem'
 
@@ -11,7 +10,7 @@ const CardList = ({ projectCards }) => {
 
         //get title content
         for(var j in el.properties){
-          if(el.properties[j].field_id === 'title'){
+          if(el.properties[j].name === 'title'){
             return <CardListItem name={el.properties[j].content} key={i} />
           }
         }
