@@ -6,6 +6,10 @@ import { addProjectCard } from '../../actions'
 const CardActions = ( { addProjectCard } ) => {
 
   const addCard = () => {
+    const modalAddCard = document.querySelector('.modal-add-card')
+
+    modalAddCard.classList.remove('hide')
+
     const newCard = {
       _id: 3,
       name: 'A NEW card',
@@ -16,7 +20,7 @@ const CardActions = ( { addProjectCard } ) => {
         { name: 'Cost', field_id: 'B', content: '10 :coin:' }
       ]
     }
-    console.log(newCard, "newCard in CardActions");
+
     addProjectCard(newCard)
   }
 

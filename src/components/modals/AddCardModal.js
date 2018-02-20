@@ -5,17 +5,23 @@ import { connect } from 'react-redux'
 class AddCardModal extends Component {
   state = {}
 
+  closeModal = () => {
+    const modalAddCard = document.querySelector('.modal-add-card')
+
+    modalAddCard.classList.add('hide')
+  }
+
   render () {
     return (
-      <div>
+      <div className="modal-wrapper modal-add-card hide">
 
-        <div className="dark-overlay">
+        <div className="dark-overlay" onClick={this.closeModal}>
         </div>
 
         <div className="modal">
           <div className="modal-close">
             <span>Add New Card</span>
-            <i className="material-icons close-icon">close</i>
+            <i className="material-icons close-icon" onClick={this.closeModal}>close</i>
           </div>
 
           <div className="mtb-2">
