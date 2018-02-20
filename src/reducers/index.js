@@ -5,13 +5,13 @@ function projectCards(state = { all: [] }, action) {
   console.log("in reducer");
   switch (action.type) {
     case ADD_PROJECT_CARD:
-      console.log("ADD_PROJECT_CARD case");
+    console.log(state.all, "state");
+    console.log(action.payload, "action.payload");
       return {
         ...state,
-        all: action.payload
+        all: [...state.all, action.payload]
       }
     case GET_PROJECT_CARDS:
-    console.log("GET_PROJECT_CARDS case");
       return {
         ...state,
         all: action.payload

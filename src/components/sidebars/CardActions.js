@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { addProjectCard } from '../../actions'
 
-const CardActions = () => {
+const CardActions = ( { addProjectCard } ) => {
 
   const addCard = () => {
     const newCard = {
