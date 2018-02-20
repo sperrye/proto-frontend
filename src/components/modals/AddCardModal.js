@@ -17,13 +17,11 @@ class AddCardModal extends Component {
     const newCardTitle = document.querySelector('#card-title').value
     const newCardQuantity = document.querySelector('#card-quantity').value
 
-    console.log(newCardTitle, newCardQuantity, "new stuff");
-
     const newCard = {
       project_id: 1,
       quantity: newCardQuantity,
       properties: [
-        { field_id: 'title', content: newCardTitle }
+        { name: 'title', field_id: '1', content: newCardTitle }
       ]
     }
 
@@ -47,7 +45,7 @@ class AddCardModal extends Component {
           <div className="mtb-2">
             <div>
               <h3>Title</h3>
-              <input type="text" name="cardTitle" id="card-title"></input>
+              <input type="text" name="cardTitle" id="card-title" className="modal-input"></input>
             </div>
             <div className="checkbox-option mtb-05">
               <i className="material-icons small-icon mr-05">check_box</i>
@@ -57,7 +55,7 @@ class AddCardModal extends Component {
 
           <div className="mtb-2">
             <h3>Quantity</h3>
-            <input type="text" name="cardQuantity" id="card-quantity"></input>
+            <input type="text" name="cardQuantity" id="card-quantity" className="modal-input"></input>
           </div>
 
           <button onClick={ this.addCard } className="green">Add New Card</button>

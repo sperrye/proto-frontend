@@ -16,6 +16,10 @@
   padding: 2em;
 }
 
+.modal-input {
+  font-size: 1em;
+}
+
 .modal-close {
   display: flex;
   justify-content: space-between;

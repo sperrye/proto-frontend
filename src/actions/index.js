@@ -2,7 +2,6 @@ export const GET_PROJECT_CARDS = 'GET_PROJECT_CARDS'
 export const ADD_PROJECT_CARD = 'ADD_PROJECT_CARD'
 
 export function addProjectCard(newCard){
-  console.log("in action");
   return {
     type: ADD_PROJECT_CARD,
     payload: newCard

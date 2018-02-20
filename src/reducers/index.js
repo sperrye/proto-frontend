@@ -4,7 +4,6 @@ import { GET_PROJECT_CARDS, ADD_PROJECT_CARD } from '../actions'
 function projectCards(state = { all: [] }, action) {
   switch (action.type) {
     case ADD_PROJECT_CARD:
-        console.log("in reducer");
       return {
         ...state,
         all: [...state.all, action.payload]
