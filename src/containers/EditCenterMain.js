@@ -7,7 +7,7 @@ const EditCenterMain = () => {
 
       <div className="current-card-wrapper">
         <div className="current-card"></div>
-        <div className="mtb-1 txt-ctr">Card Name</div>
+        <div className="mtb-1 txt-ctr white">Card Name</div>
       </div>
 
   )

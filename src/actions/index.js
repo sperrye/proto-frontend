@@ -9,7 +9,7 @@ export function addProjectCard(newCard){
 }
 
 export function getProjectCards(){
-
+// temporary card list until hooked to API
   const tempProjectCards = [
     { _id: 1,
       project_id: 1,

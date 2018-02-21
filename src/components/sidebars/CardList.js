@@ -3,18 +3,16 @@ import { connect } from 'react-redux'
 import CardListItem from './CardListItem'
 
 const CardList = ({ projectCards }) => {
-
+// see ACTIONS > getProjectCards
   return (
     <div className="mtb-1 card-list">
-      {projectCards.all.map((el, i) => {
-
+      { projectCards.all.map((el, i) => {
         //get title content
         for(var j in el.properties){
           if(el.properties[j].name === 'title'){
             return <CardListItem name={el.properties[j].content} key={i} />
           }
         }
-
       })}
     </div>
   )
