@@ -6,6 +6,10 @@ const CardActions = ( ) => {
   const openAddCardModal = () => {
     const modalAddCard = document.querySelector('.modal-add-card')
     modalAddCard.classList.remove('hide')
+    let clearTitle = document.querySelector('#card-title')
+    let clearQuantity = document.querySelector('#card-quantity')
+    clearTitle.value = ''
+    clearQuantity.value = ''
   }
 
   return (

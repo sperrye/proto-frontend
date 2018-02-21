@@ -14,8 +14,8 @@ class AddCardModal extends Component {
   addCard = (e) => {
     e.preventDefault()
 
-    const newCardTitle = document.querySelector('#card-title').value
-    const newCardQuantity = document.querySelector('#card-quantity').value
+    let newCardTitle = document.querySelector('#card-title').value
+    let newCardQuantity = document.querySelector('#card-quantity').value
 
     const newCard = {
       project_id: 1,
