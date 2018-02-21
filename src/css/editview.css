@@ -117,8 +117,8 @@ input {
 }
 
 .current-card {
-  width: 250px;
-  height: 330px;
+  width: 242px;
+  height: 338px;
   background-color: #fff;
 }
 
@@ -140,4 +140,84 @@ input {
   width: 125px;
   height: 175px;
   background-color: #fff;
+}
+/*===Editable Card Container===*/
+.outline {
+  border: solid 1px;
+}
+.grid {
+  display: flex;
+  flex-direction: row;
+}
+.grid ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.box-col li {
+  border: 1px solid black;
+  border-top: none;
+}
+.box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.box-row {
+  display: flex;
+  flex-direction: row;
+}
+.box-row li {
+  border: solid 1px black;
+  border-right: 0;
+}
+.box-row li:first-child {
+  border-left: 0;
+}
+.text-col li{
+  border-bottom: solid 1px black;
+}
+.row-1 {
+  height: 25px;
+  display: flex;
+  margin-bottom: 1px;
+  align-items: center;
+  justify-content: space-around;
+}
+.center-grid {
+  justify-content: space-around;
+}
+.art-space {
+  height: 120px;
+  opacity: 0;
+}
+.text-col-2 {
+  width: 200px;
+}
+.text-col-2 li {
+  border: solid 1px black;
+  border-bottom: 0;
+}
+.row-2 {
+  height: 20px;
+}
+.row-3 {
+  height: 60px;
+}
+.row-4 {
+  height: 30px;
+}
+.right-col li {
+  border-right: 0px;
+}
+.left-col li {
+  border-left: 0px;
+}
+.left-col li:first-child, .right-col li:first-child, .top-row li {
+  border-top: 0px;
+}
+.bottom-row li {
+  border-bottom: 0px;
 }
