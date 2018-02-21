@@ -1,6 +1,16 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-const CardActions = () => {
+const CardActions = ( ) => {
+
+  const openAddCardModal = () => {
+    const modalAddCard = document.querySelector('.modal-add-card')
+    modalAddCard.classList.remove('hide')
+    let clearTitle = document.querySelector('#card-title')
+    let clearQuantity = document.querySelector('#card-quantity')
+    clearTitle.value = ''
+    clearQuantity.value = ''
+  }
 
   return (
     <div className="m-1 card-actions">
@@ -12,7 +22,7 @@ const CardActions = () => {
         <i className="material-icons">check_box_outline_blank</i>
         <span>Unselect All</span>
       </div>
-      <div className="mtb-05 local-action" id="add-card">
+      <div onClick={ openAddCardModal } className="mtb-05 local-action" id="add-card">
         <i className="material-icons">add</i>
         <span>Add Card</span>
       </div>
@@ -28,4 +38,11 @@ const CardActions = () => {
   )
 }
 
-export default CardActions
+const mapStateToProps = state => ({})
+
+const mapDispatchToProps = dispatch => ({})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CardActions)

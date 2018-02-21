@@ -1,0 +1,41 @@
+.dark-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  position: fixed;
+  top: 5em;
+  left: 0em;
+  right: 0em;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 420px;
+  padding: 2em;
+}
+
+.modal-input {
+  font-size: 1em;
+}
+
+.modal-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+.small-icon {
+  font-size: 1em;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+}

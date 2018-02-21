@@ -1,24 +1,30 @@
 export const GET_PROJECT_CARDS = 'GET_PROJECT_CARDS'
+export const ADD_PROJECT_CARD = 'ADD_PROJECT_CARD'
+
+export function addProjectCard(newCard){
+  return {
+    type: ADD_PROJECT_CARD,
+    payload: newCard
+  }
+}
 
 export function getProjectCards(){
-
+// temporary card list until hooked to API
   const tempProjectCards = [
     { _id: 1,
-      name: 'A cool card',
       project_id: 1,
       quantity: 3,
       properties: [
-        { field_id: 'title', content: 'Mighty JSON' },
+        { name: "title", field_id: 'A', content: 'This is the card title' },
         { name: 'Cost', field_id: 'B', content: '2 :coin:' }
       ]
     },
     { _id: 2,
-      name: 'Another awesome card',
       project_id: 1,
-      quantity: 3,
+      quantity: 5,
       properties: [
-        { field_id: 'title', content: 'Curly Boys' },
-        { name: 'Cost', field_id: 'B', content: '5 :coin:' }
+        { name: "title", field_id: 'A', content: 'Lalala' },
+        { name: 'Cost', field_id: 'B', content: '4 :coin:' }
       ]
     }
   ]
