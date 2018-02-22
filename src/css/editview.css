@@ -40,10 +40,7 @@
   display: flex;
   align-items: center;
   padding: 0.5em 1em;
-}
-
-.selected-list-item {
-  background-color: #e6f1ff;
+  cursor: pointer;
 }
 
 input {
@@ -101,8 +98,17 @@ input {
   color: #4A90E2;
 }
 
-/*==ACTION AREA==*/
+/*==ACTIONS==*/
 
+/*==CARDLIST==*/
+.selected-card-item {
+  background-color: #e6f1ff;
+}
+
+.card-list-item-name, .card-list-item-symbol {
+  pointer-events: none;
+  user-select: none;
+}
 
 /*=====CENTER AREA=====*/
 .edit-center-container {
