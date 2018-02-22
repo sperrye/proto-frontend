@@ -1,8 +1,21 @@
 import { combineReducers } from 'redux'
-import { GET_PROJECT_CARDS, ADD_PROJECT_CARD } from '../actions'
+import { GET_PROJECT_CARDS, ADD_PROJECT_CARD, SELECT_PROJECT_CARD } from '../actions'
 
 function projectCards(state = { all: [] }, action) {
   switch (action.type) {
+    case SELECT_PROJECT_CARD:
+
+      let selectedState = state.all.map(el => {
+        if(el._id === action.payload._id){
+          el.is_selected = action.payload.is_selected
+        }
+        return el
+      })
+
+      return {
+        ...state,
+        all: selectedState
+      }
     case ADD_PROJECT_CARD:
       return {
         ...state,

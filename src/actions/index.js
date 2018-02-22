@@ -1,5 +1,6 @@
 export const GET_PROJECT_CARDS = 'GET_PROJECT_CARDS'
 export const ADD_PROJECT_CARD = 'ADD_PROJECT_CARD'
+export const SELECT_PROJECT_CARD = 'SELECT_PROJECT_CARD'
 
 export function addProjectCard(newCard){
   return {
@@ -8,24 +9,34 @@ export function addProjectCard(newCard){
   }
 }
 
+export function updateCard(changedCard){
+  return {
+    type: SELECT_PROJECT_CARD,
+    payload: changedCard
+  }
+}
+
 export function getProjectCards(){
 // temporary card list until hooked to API
+// * will have to add 'is_selected' bc won't be stored in DB
   const tempProjectCards = [
-    { _id: 1,
+    { _id: 111,
       project_id: 1,
       quantity: 3,
       properties: [
         { name: "title", field_id: 'A', content: 'This is the card title' },
         { name: 'Cost', field_id: 'B', content: '2 :coin:' }
-      ]
+      ],
+      is_selected: false
     },
-    { _id: 2,
+    { _id: 222,
       project_id: 1,
       quantity: 5,
       properties: [
         { name: "title", field_id: 'A', content: 'Lalala' },
         { name: 'Cost', field_id: 'B', content: '4 :coin:' }
-      ]
+      ],
+      is_selected: false
     }
   ]
 
