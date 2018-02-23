@@ -9,10 +9,10 @@ export function addProjectCard(newCard){
   }
 }
 
-export function updateCard(changedCard){
+export function selectCard(clickedCard){
   return {
     type: SELECT_PROJECT_CARD,
-    payload: changedCard
+    payload: clickedCard
   }
 }
 

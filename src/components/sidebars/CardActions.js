@@ -1,7 +1,9 @@
 import React from 'react'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { selectCard } from '../../actions'
 
-const CardActions = () => {
+const CardActions = ( { projectCards, selectCard } ) => {
 
   const openAddCardModal = () => {
     const modalAddCard = document.querySelector('.modal-add-card')
@@ -13,11 +15,9 @@ const CardActions = () => {
   }
 
   const selectAll = () => {
-    const allCardItems = document.querySelectorAll('.card-list-item')
-    console.log(allCardItems, "allCardItems");
-    allCardItems.forEach((el) => {
-      el.classList.add('selected-card-item')
-    })
+    //get all project cards from state
+    //use map to change is_selected on all of them
+    //call a function in ACTIONS to change state
   }
 
   return (
@@ -46,9 +46,13 @@ const CardActions = () => {
   )
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({
+  projectCards: state.projectCards
+})
 
-const mapDispatchToProps = dispatch => ({})
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators( { selectCard }, dispatch)
+}
 
 export default connect(
   mapStateToProps,

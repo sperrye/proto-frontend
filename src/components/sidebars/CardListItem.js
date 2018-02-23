@@ -1,9 +1,9 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { updateCard } from '../../actions'
+import { selectCard } from '../../actions'
 
-const CardListItem = ({ name, selected, dataid, projectCards, updateCard }) => {
+const CardListItem = ({ name, selected, dataid, projectCards, selectCard }) => {
 
   const toggleSelected = (e) => {
     //get clicked dataid
@@ -14,6 +14,8 @@ const CardListItem = ({ name, selected, dataid, projectCards, updateCard }) => {
       return el._id === parseInt(cardId)
     })
 
+    console.log(clickedCard[0], "clickedCard before toggle");
+
     //toggle is_selected
     if (clickedCard[0].is_selected === false) {
       clickedCard[0].is_selected = true
@@ -21,8 +23,11 @@ const CardListItem = ({ name, selected, dataid, projectCards, updateCard }) => {
       clickedCard[0].is_selected = false
     }
 
-    //send to ACTIONS 
-    updateCard(clickedCard)
+    console.log(clickedCard[0], "clickedCard after toggle");
+    //send to ACTIONS
+    // * right now this is sending the WHOLE card...
+    // depending on how editing pans out, may need to only send the is_selected portion
+    selectCard(clickedCard)
   }
 
   return (
@@ -40,7 +45,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators( { updateCard }, dispatch)
+  return bindActionCreators( { selectCard }, dispatch)
 }
 
 export default connect(
