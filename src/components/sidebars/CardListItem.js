@@ -27,6 +27,7 @@ const CardListItem = ({ name, selected, dataid, projectCards, selectCard }) => {
     //send to ACTIONS
     // * right now this is sending the WHOLE card...
     // depending on how editing pans out, may need to only send the is_selected portion
+    console.log(projectCards.all, "projectCards.all");
     selectCard(clickedCard)
   }
 

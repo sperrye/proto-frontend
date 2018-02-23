@@ -18,11 +18,16 @@ class AddCardModal extends Component {
     let newCardQuantity = document.querySelector('#card-quantity').value
 
     const newCard = {
+      //how to increase id each time?
+      //doesn't the db do that?
+      //but I'm in state...
+      _id: 333,
       project_id: 1,
-      quantity: newCardQuantity,
+      quantity: parseInt(newCardQuantity),
       properties: [
         { name: 'title', field_id: '1', content: newCardTitle }
-      ]
+      ],
+      is_selected: false
     }
 
     this.props.addProjectCard(newCard)
