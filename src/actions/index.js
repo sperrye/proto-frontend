@@ -2,6 +2,7 @@ export const GET_PROJECT_CARDS = 'GET_PROJECT_CARDS'
 export const ADD_PROJECT_CARD = 'ADD_PROJECT_CARD'
 export const SELECT_PROJECT_CARD = 'SELECT_PROJECT_CARD'
 export const SELECT_ALL_CARDS = 'SELECT_ALL_CARDS'
+export const UNSELECT_ALL_CARDS = 'UNSELECT_ALL_CARDS'
 
 export function addProjectCard(newCard){
   return {
@@ -20,6 +21,13 @@ export function selectCard(clickedCard){
 export function selectAllCards(allCards){
   return {
     type: SELECT_ALL_CARDS,
+    payload: allCards
+  }
+}
+
+export function unselectAllCards(allCards){
+  return {
+    type: UNSELECT_ALL_CARDS,
     payload: allCards
   }
 }

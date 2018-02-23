@@ -1,10 +1,9 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { selectCard } from '../../actions'
-import { selectAllCards } from '../../actions'
+import { selectCard, selectAllCards, unselectAllCards } from '../../actions'
 
-const CardActions = ( { projectCards, selectCard, selectAllCards } ) => {
+const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCards } ) => {
 
   const openAddCardModal = () => {
     const modalAddCard = document.querySelector('.modal-add-card')
@@ -16,14 +15,19 @@ const CardActions = ( { projectCards, selectCard, selectAllCards } ) => {
   }
 
   const selectAll = () => {
-    //get all project cards from state
-    //use map to change is_selected on all of them
-    const allCards = projectCards.all.map(el => {
+    const allCardsSelected = projectCards.all.map(el => {
       el.is_selected = true
       return el
     })
-    //call a function in ACTIONS to change state
-    selectAllCards(allCards)
+    selectAllCards(allCardsSelected)
+  }
+
+  const unselectAll = () => {
+    const allCardsUnselected = projectCards.all.map(el => {
+      el.is_selected = false
+      return el
+    })
+    unselectAllCards(allCardsUnselected)
   }
 
   return (
@@ -36,7 +40,7 @@ const CardActions = ( { projectCards, selectCard, selectAllCards } ) => {
         <i className="material-icons">check_box</i>
         <span>Select All</span>
       </div>
-      <div className="mtb-05 local-action">
+      <div onClick={ unselectAll } className="mtb-05 local-action">
         <i className="material-icons">check_box_outline_blank</i>
         <span>Unselect All</span>
       </div>
@@ -57,7 +61,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators( { selectCard, selectAllCards }, dispatch)
+  return bindActionCreators( { selectCard, selectAllCards, unselectAllCards }, dispatch)
 }
 
 export default connect(
