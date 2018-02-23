@@ -6,23 +6,23 @@ import { updateCard } from '../../actions'
 const CardListItem = ({ name, selected, dataid, projectCards, updateCard }) => {
 
   const toggleSelected = (e) => {
-    //look in projectCards for this id,
-    //and toggle is_selected
-    console.log(e.target.getAttribute('dataid'));
-    
-    let changedCard =
-    { _id: 222,
-      project_id: 1,
-      quantity: 3,
-      properties: [
-        { name: "title", field_id: 'A', content: 'This is UPDATED!' },
-        { name: 'Cost', field_id: 'B', content: '2 :coin:' }
-      ],
-      is_selected: true
+    //get clicked dataid
+    const cardId = e.target.getAttribute('dataid')
+
+    //find by id in redux state
+    const clickedCard = projectCards.all.filter(el => {
+      return el._id === parseInt(cardId)
+    })
+
+    //toggle is_selected
+    if (clickedCard[0].is_selected === false) {
+      clickedCard[0].is_selected = true
+    } else {
+      clickedCard[0].is_selected = false
     }
 
-    updateCard(changedCard)
-    console.log("toggle function");
+    //send to ACTIONS 
+    updateCard(clickedCard)
   }
 
   return (

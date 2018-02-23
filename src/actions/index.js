@@ -18,7 +18,7 @@ export function updateCard(changedCard){
 
 export function getProjectCards(){
 // temporary card list until hooked to API
-// * will have to add 'is_selected' bc won't be stored in DB
+// * will have to ADD 'is_selected' bc won't be stored in DB
   const tempProjectCards = [
     { _id: 111,
       project_id: 1,

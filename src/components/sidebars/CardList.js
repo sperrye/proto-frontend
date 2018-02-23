@@ -21,7 +21,6 @@ const CardList = ({ projectCards }) => {
   )
 }
 
-
 const mapStateToProps = state => ({
   projectCards: state.projectCards
 })
