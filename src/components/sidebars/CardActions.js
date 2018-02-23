@@ -31,24 +31,24 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
   }
 
   return (
-    <div className="m-1 card-actions">
-      <div onClick={ openAddCardModal } className="mtb-05 local-action" id="add-card">
+    <div className="mtb-1 card-actions">
+      <div onClick={ openAddCardModal } className="local-action">
         <i className="material-icons">add</i>
         <span>Add Card</span>
       </div>
-      <div onClick={ selectAll } className="mtb-05 local-action">
+      <div onClick={ selectAll } className="local-action">
         <i className="material-icons">check_box</i>
         <span>Select All</span>
       </div>
-      <div onClick={ unselectAll } className="mtb-05 local-action">
+      <div onClick={ unselectAll } className="local-action">
         <i className="material-icons">check_box_outline_blank</i>
         <span>Unselect All</span>
       </div>
-      <div className="mtb-05 local-action">
+      <div className="local-action">
         <i className="material-icons">delete</i>
         <span>Delete Selected</span>
       </div>
-      <div className="mtb-05 local-action">
+      <div className="local-action">
         <i className="material-icons">print</i>
         <span>Print Preview</span>
       </div>
