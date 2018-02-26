@@ -236,7 +236,7 @@ input {
 .bottom-row li {
   border-bottom: 0px;
 }
-input {
+.edit-card-input {
   border: 0;
   background: none;
   border-radius: 0px;

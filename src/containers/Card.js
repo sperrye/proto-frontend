@@ -23,7 +23,7 @@ class Card extends Component {
             </li>
             <li>
               <ul className='text-col'>
-                <li id='1'><input placeholder='1' className='row-1'/></li>
+                <li id='1'><input placeholder='1' className='row-1 edit-card-input'/></li>
                 <li id='art' className='art-space'></li>
               </ul>
             </li>
