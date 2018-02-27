@@ -1,0 +1,117 @@
+/*  Projects Screen  */
+h1 {
+  font-weight: normal;
+}
+hr {
+  width: 70%;
+  border: 0;
+  height: 0;
+  border-top: 2px solid black;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 50px;
+}
+.projects-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+}
+.projects-thumbs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.project-thumb {
+  width: 150px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px #333;
+}
+.new-project-thumb {
+  width: 150px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px #333;
+  font-size: 3rem;
+  color: #333;
+}
+.project-thumb-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  color: grey;
+}
+/*  New Project Modal  */
+form {
+  height: 410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+label {
+  display: flex;
+  align-self: flex-start;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+input {
+  border-radius: 3px;
+  font-size: 1rem;
+}
+sub {
+  align-self: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: cornflowerblue;
+}
+.new-project-form {
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  position: absolute;
+  z-index: 50;
+  top: 110px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 8px #999;
+  border-radius: 2px;
+}
+.white-overlay {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.btn {
+  border: 0;
+}
+.btn-import-csv {
+  background-color: cornflowerblue;
+  color: white;
+}
+.btn-create-project {
+  height: 3rem;
+  background-color: mediumseagreen;
+  color: white;
+}
