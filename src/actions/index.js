@@ -4,7 +4,39 @@ export const SELECT_PROJECT_CARD = 'SELECT_PROJECT_CARD'
 export const SELECT_ALL_CARDS = 'SELECT_ALL_CARDS'
 export const UNSELECT_ALL_CARDS = 'UNSELECT_ALL_CARDS'
 
+const baseURL = 'localhost:3000'
+
 export function addProjectCard(newCard){
+  //   const mutation = `mutation {
+  //   createCard(input: {
+  //   projectId:"5a861f6ef36d2873fccf8312"
+  //   quantity:1
+  //   properties:[
+  //     {name:"title", fieldId:"1", content: "This card has a title"}
+  //   ]
+  //   }) {
+  //       _id
+  //         projectId
+  //       quantity
+  //       properties {
+  //         name
+  //         fieldId
+  //         content
+  //       }
+  //     }
+  //   }`
+  //
+  //   const data = await fetch(`${baseURL}/graphql`, {
+  //     method: 'POST',
+  //     body: JSON.stringify(mutation)
+  //   })
+  //
+  //   dispatch({
+  //     type: ADD_PROJECT_CARD,
+  //     payload: newCard
+  //   })
+  // }
+  
   return {
     type: ADD_PROJECT_CARD,
     payload: newCard

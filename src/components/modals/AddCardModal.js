@@ -18,9 +18,7 @@ class AddCardModal extends Component {
     let newCardQuantity = document.querySelector('#card-quantity').value
 
     const newCard = {
-      //how to increase id each time?
-      //doesn't the db do that?
-      //but I'm in state...
+      //TO-DO: connect to DB (and it'll increment id for me)
       _id: 333,
       project_id: 1,
       quantity: parseInt(newCardQuantity),
