@@ -10,14 +10,16 @@ const CardList = ({ projectCards }) => {
         //get title content
         for(var j in el.properties){
           if(el.properties[j].name === 'title'){
-            return <CardListItem name={el.properties[j].content} key={i} />
+            return <CardListItem name={el.properties[j].content}
+            selected={el.is_selected}
+            key={el._id}
+            dataid={el._id}/>
           }
         }
       })}
     </div>
   )
 }
-
 
 const mapStateToProps = state => ({
   projectCards: state.projectCards

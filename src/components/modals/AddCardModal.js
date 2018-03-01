@@ -18,11 +18,14 @@ class AddCardModal extends Component {
     let newCardQuantity = document.querySelector('#card-quantity').value
 
     const newCard = {
+      //TO-DO: connect to DB (and it'll increment id for me)
+      _id: 333,
       project_id: 1,
-      quantity: newCardQuantity,
+      quantity: parseInt(newCardQuantity),
       properties: [
         { name: 'title', field_id: '1', content: newCardTitle }
-      ]
+      ],
+      is_selected: false
     }
 
     this.props.addProjectCard(newCard)
