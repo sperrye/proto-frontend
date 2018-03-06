@@ -10,6 +10,7 @@ import EditCenterMain from './containers/EditCenterMain'
 import EditCenterCarousel from './containers/EditCenterCarousel'
 import AddCardModal from './components/modals/AddCardModal'
 import DeleteCardsModal from './components/modals/DeleteCardsModal'
+import PrintPreview from './containers/PrintPreview.js'
 
 const App = () => (
 
@@ -39,35 +40,7 @@ const App = () => (
           <NavBar />
           <div className="print-preview-container">
             <EditLeftSidebar />
-            <div className="print-preview">
-              <div className="print-preview-page">
-                <div className="card-row">
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                </div>
-                <div className="card-row">
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                </div>
-                <div className="card-row">
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                </div>
-                <div className="card-row">
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                  <div className="card-preview"></div>
-                </div>
-
-              </div>
-            </div>
+            <PrintPreview />
           </div>
         </div>
       }/>
