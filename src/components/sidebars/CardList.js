@@ -10,7 +10,10 @@ const CardList = ({ projectCards }) => {
         //get title content
         for(var j in el.properties){
           if(el.properties[j].name === 'Title'){
-            return <CardListItem name={el.properties[j].content} key={i} dataid={el._id} />
+            return <CardListItem name={el.properties[j].content}
+            selected={el.is_selected}
+            key={i}
+            dataid={el._id} />
           }
         }
       })}

@@ -18,7 +18,7 @@ const CardListItem = ({ name, selected, dataid, projectCards, selectCard }) => {
     console.log(clickedCard[0], "clickedCard before toggle");
 
     //toggle is_selected
-    if (clickedCard[0].is_selected === false || clickedCard[0].is_selected === '') {
+    if (clickedCard[0].is_selected === false) {
       clickedCard[0].is_selected = true
     } else {
       clickedCard[0].is_selected = false

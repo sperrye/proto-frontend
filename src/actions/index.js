@@ -90,6 +90,10 @@ export function getProjectCards(){
     })
     .then(res => res.json())
 
+    data.data.getProjectCards.map(el => {
+      return el.is_selected = false
+    })
+
     dispatch({
       type: GET_PROJECT_CARDS,
       payload: data.data.getProjectCards
