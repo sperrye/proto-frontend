@@ -40,10 +40,6 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
     modalDeleteCards.classList.remove('hide')
   }
 
-  const printPreview = () => {
-
-  }
-
   return (
     <div className="mtb-1 card-actions">
       <div onClick={ openAddCardModal } className="local-action">
@@ -69,9 +65,6 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
           <span>Print Preview</span>
         </div>
       </Link>
-      <div className="sm-btn print-pdf">
-        <i className="material-icons mr-05 ">print</i> <span>Print Preview to PDF</span>
-      </div>
     </div>
   )
 }
