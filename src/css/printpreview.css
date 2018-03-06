@@ -15,7 +15,7 @@
   margin: 1em auto;
   height: 837px;
   width: 648px;
-  padding: 50px;
+  padding: 40px;
 }
 
 .card-row {
@@ -24,7 +24,12 @@
 }
 
 .card-preview {
-  width: 125px;
-  height: 175px;
+  width: 180px;
+  height: 252px;
   border: 1px solid #d8d8d8;
+}
+
+.print-pdf {
+  margin: 0.5em 1em;
+  justify-content: center;
 }

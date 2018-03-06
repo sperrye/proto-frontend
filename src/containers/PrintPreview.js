@@ -8,22 +8,13 @@ const PrintPreview = ({}) => {
           <div className="card-preview"></div>
           <div className="card-preview"></div>
           <div className="card-preview"></div>
-          <div className="card-preview"></div>
         </div>
         <div className="card-row">
           <div className="card-preview"></div>
           <div className="card-preview"></div>
           <div className="card-preview"></div>
-          <div className="card-preview"></div>
         </div>
         <div className="card-row">
-          <div className="card-preview"></div>
-          <div className="card-preview"></div>
-          <div className="card-preview"></div>
-          <div className="card-preview"></div>
-        </div>
-        <div className="card-row">
-          <div className="card-preview"></div>
           <div className="card-preview"></div>
           <div className="card-preview"></div>
           <div className="card-preview"></div>
