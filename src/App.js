@@ -11,6 +11,7 @@ import EditCenterCarousel from './containers/EditCenterCarousel'
 import AddCardModal from './components/modals/AddCardModal'
 import DeleteCardsModal from './components/modals/DeleteCardsModal'
 import PrintPreview from './containers/PrintPreview.js'
+import PrintSidebar from './containers/PrintSidebar'
 
 const App = () => (
 
@@ -39,7 +40,7 @@ const App = () => (
         <div className="route-wrapper print-route">
           <NavBar />
           <div className="print-preview-container">
-            <EditLeftSidebar />
+            <PrintSidebar />
             <PrintPreview />
           </div>
         </div>

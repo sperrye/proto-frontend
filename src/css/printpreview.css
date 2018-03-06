@@ -33,3 +33,21 @@
   margin: 0.5em 1em;
   justify-content: center;
 }
+
+.go-back {
+  display: flex;
+  align-items: center;
+  padding: 0.8em;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #000;
+}
+
+.go-back:hover {
+  background-color: #ffebee;
+}
+
+.go-back:active {
+  background-color: #f3f3f3;
+}
