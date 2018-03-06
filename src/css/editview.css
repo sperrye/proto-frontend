@@ -118,10 +118,24 @@ input {
   color: #4A90E2;
 }
 
-/*==ACTIONS==*/
-.delete-red {
+.red {
   color: #f44336;
 }
+
+.red-bg {
+  background-color: #f44336;
+  transition: 0.5s;
+}
+
+.red-bg:hover {
+  background-color: #d32f2f;
+}
+
+.hover-red:hover {
+  color: #f44336;
+}
+
+/*==ACTIONS==*/
 
 /*==CARDLIST==*/
 .selected-card-item {

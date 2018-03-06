@@ -6,6 +6,7 @@ import './App.css'
 import EditCardsView from './containers/EditCardsView'
 import NavBar from './components/shared/NavBar'
 import AddCardModal from './components/modals/AddCardModal'
+import DeleteCardsModal from './components/modals/DeleteCardsModal'
 
 const App = () => (
 
@@ -15,6 +16,7 @@ const App = () => (
       <Route exact path='/' component={ props =>
         <div className="route-wrapper">
 
+          <DeleteCardsModal />
           <AddCardModal />
           <NavBar />
           <EditCardsView />
