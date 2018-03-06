@@ -14,9 +14,6 @@ const CardListItem = ({ name, selected, dataid, projectCards, selectCard }) => {
       return el._id === cardId
     })
 
-    console.log(cardId, "cardId");
-    console.log(clickedCard[0], "clickedCard before toggle");
-
     //toggle is_selected
     if (clickedCard[0].is_selected === false) {
       clickedCard[0].is_selected = true
@@ -24,7 +21,6 @@ const CardListItem = ({ name, selected, dataid, projectCards, selectCard }) => {
       clickedCard[0].is_selected = false
     }
 
-    console.log(clickedCard[0], "clickedCard after toggle");
     //send to ACTIONS
     // * right now this is sending the WHOLE card...
     // depending on how editing pans out, may need to only send the is_selected portion

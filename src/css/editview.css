@@ -119,6 +119,9 @@ input {
 }
 
 /*==ACTIONS==*/
+.delete-red {
+  color: #f44336;
+}
 
 /*==CARDLIST==*/
 .selected-card-item {
