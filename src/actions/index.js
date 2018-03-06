@@ -90,7 +90,6 @@ export function getProjectCards(){
     })
     .then(res => res.json())
 
-    console.log(data.data.getProjectCards, "get project cards")
     dispatch({
       type: GET_PROJECT_CARDS,
       payload: data.data.getProjectCards
