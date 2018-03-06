@@ -14,6 +14,15 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
     clearQuantity.value = ''
   }
 
+  const openDeleteModal = () => {
+    const selectedCards = projectCards.all.filter(el => {
+      return el.is_selected === true
+    })
+
+    const modalDeleteCards = document.querySelector('.modal-delete-cards')
+    modalDeleteCards.classList.remove('hide')
+  }
+
   const selectAll = () => {
     const allCardsSelected = projectCards.all.map(el => {
       el.is_selected = true
@@ -44,7 +53,8 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
         <i className="material-icons">check_box_outline_blank</i>
         <span>Unselect All</span>
       </div>
-      <div className="local-action">
+      <div onClick={ openDeleteModal }
+        className="local-action hover-red">
         <i className="material-icons">delete</i>
         <span>Delete Selected</span>
       </div>
