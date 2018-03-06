@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { GET_PROJECT_CARDS, ADD_PROJECT_CARD, SELECT_PROJECT_CARD, SELECT_ALL_CARDS, UNSELECT_ALL_CARDS } from '../actions'
+import { GET_PROJECT_CARDS, ADD_PROJECT_CARD, SELECT_PROJECT_CARD, SELECT_ALL_CARDS, UNSELECT_ALL_CARDS, DELETE_CARDS } from '../actions'
 
 function projectCards(state = { all: [] }, action) {
   switch (action.type) {
@@ -34,6 +34,15 @@ function projectCards(state = { all: [] }, action) {
       return {
         ...state,
         all: action.payload
+      }
+    case DELETE_CARDS:
+      const remainingCards =
+      state.all.filter(el => {
+        return !action.payload.includes(el)
+      })
+      return {
+        ...state,
+        all: remainingCards
       }
     default:
       return state

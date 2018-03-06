@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-// import { deleteCards } from '../../actions'
+import { deleteCards } from '../../actions'
 
 class DeleteCardsModal extends Component {
   constructor(props){
@@ -19,11 +19,14 @@ class DeleteCardsModal extends Component {
 
   confirmDeleteCards = (e) => {
     e.preventDefault()
-    console.log(this.props.projectCards, "props");
 
+    const selectedCards =
+    this.props.projectCards.all.filter(el => {
+      return el.is_selected === true
+    })
 
-    // this.props.deleteCards(selectedCards)
-    // this.closeModal()
+    this.props.deleteCards(selectedCards)
+    this.closeModal()
   }
 
   render () {
@@ -31,8 +34,6 @@ class DeleteCardsModal extends Component {
     this.props.projectCards.all.filter(el => {
       return el.is_selected === true
     })
-
-    console.log(cardsToDelete, "cardsToDelete")
 
     return (
       <div className="modal-wrapper modal-delete-cards hide">
@@ -67,8 +68,10 @@ const mapStateToProps = state => ({
   projectCards: state.projectCards
 })
 
-const mapDispatchToProps = dispatch => ({})
-//return bindActionCreators({ deleteCards }, dispatch)
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ deleteCards }, dispatch)
+}
+
 
 export default connect(
   mapStateToProps,

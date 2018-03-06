@@ -3,8 +3,19 @@ export const ADD_PROJECT_CARD = 'ADD_PROJECT_CARD'
 export const SELECT_PROJECT_CARD = 'SELECT_PROJECT_CARD'
 export const SELECT_ALL_CARDS = 'SELECT_ALL_CARDS'
 export const UNSELECT_ALL_CARDS = 'UNSELECT_ALL_CARDS'
+export const DELETE_CARDS = 'DELETE_CARDS'
 
 const baseURL = 'http://localhost:3000'
+
+export function deleteCards(selectedCards){
+  console.log(selectedCards, "selectedCards");
+  // const remainingCards
+  console.log();
+  return {
+    type: DELETE_CARDS,
+    payload: selectedCards
+  }
+}
 
 export function addProjectCard(newCard){
 
