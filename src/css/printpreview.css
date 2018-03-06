@@ -1,0 +1,30 @@
+.print-preview-container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.print-preview {
+  background-color: #535353;
+  height: 100%;
+  width: 80%;
+}
+
+.print-preview-page {
+  background-color: #fff;
+  margin: 1em auto;
+  height: 837px;
+  width: 648px;
+  padding: 50px;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center;
+}
+
+.card-preview {
+  width: 125px;
+  height: 175px;
+  border: 1px solid #d8d8d8;
+}
