@@ -8,9 +8,20 @@ export const DELETE_CARDS = 'DELETE_CARDS'
 const baseURL = 'http://localhost:3000'
 
 export function deleteCards(selectedCards){
-  console.log(selectedCards, "selectedCards");
-  // const remainingCards
-  console.log();
+
+  // const mutation = `mutation deleteCard($_id:ID){
+  //   deleteCard(_id:$_id){
+  //     _id
+  //     projectId
+  //     quantity
+  //     properties{
+  //       name
+  //       fieldId
+  //       content
+  //     }
+  //   }
+  // }`
+
   return {
     type: DELETE_CARDS,
     payload: selectedCards
