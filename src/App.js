@@ -10,16 +10,20 @@ import AddCardModal from './components/modals/AddCardModal'
 const App = () => (
 
   <Router>
+    <div className="height100">
 
       <Route exact path='/' component={ props =>
         <div className="route-wrapper">
-          
+
           <AddCardModal />
           <NavBar />
           <EditCardsView />
 
         </div>
       }/>
+
+
+    </div>
 
   </Router>
 

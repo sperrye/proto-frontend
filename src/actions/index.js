@@ -1,36 +1,76 @@
 export const GET_PROJECT_CARDS = 'GET_PROJECT_CARDS'
 export const ADD_PROJECT_CARD = 'ADD_PROJECT_CARD'
 
+const baseURL = 'http://localhost:3000'
+
 export function addProjectCard(newCard){
-  return {
-    type: ADD_PROJECT_CARD,
-    payload: newCard
+
+  const mutation = `mutation card($input:CardInput){
+    createCard(input:$input){
+      _id
+      projectId
+      quantity
+      properties{
+        name
+        fieldId
+        content
+      }
+    }
+  }`
+
+  return async (dispatch) => {
+    const data = await fetch(`http://localhost:3000/graphql`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          query: mutation,
+          variables: { input: newCard }
+      })
+    })
+    .then(res => res.json())
+
+    dispatch({
+      type: ADD_PROJECT_CARD,
+      payload: data.data.createCard
+    })
   }
+
 }
 
 export function getProjectCards(){
-// temporary card list until hooked to API
-  const tempProjectCards = [
-    { _id: 1,
-      project_id: 1,
-      quantity: 3,
-      properties: [
-        { name: "title", field_id: 'A', content: 'This is the card title' },
-        { name: 'Cost', field_id: 'B', content: '2 :coin:' }
-      ]
-    },
-    { _id: 2,
-      project_id: 1,
-      quantity: 5,
-      properties: [
-        { name: "title", field_id: 'A', content: 'Lalala' },
-        { name: 'Cost', field_id: 'B', content: '4 :coin:' }
-      ]
-    }
-  ]
 
-  return {
-    type: GET_PROJECT_CARDS,
-    payload: tempProjectCards
+  const query = `query projectCards($projectId:ID){
+  getProjectCards(projectId:$projectId){
+    _id
+    projectId
+    properties{
+      name
+      fieldId
+      content
+    }
+    }
+  }`
+
+  return async (dispatch) => {
+    const data = await fetch(`http://localhost:3000/graphql`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          query: query,
+          variables: { projectId: '5a861f6ef36d2873fccf8312' }
+      })
+    })
+    .then(res => res.json())
+
+    console.log(data.data.getProjectCards, "get project cards")
+    dispatch({
+      type: GET_PROJECT_CARDS,
+      payload: data.data.getProjectCards
+    })
   }
+
 }
