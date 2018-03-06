@@ -26,6 +26,17 @@
   text-transform: uppercase;
   color: #4A90E2;
   cursor: pointer;
+  padding: 0.5em 1em;
+  transition: 0.25s;
+}
+
+.local-action:hover {
+  color: #2e6bb3;
+  background-color: #efefef;
+}
+
+.local-action:active {
+  color: #4A90E2;
 }
 
 .local-action > i,
@@ -41,6 +52,15 @@
   align-items: center;
   padding: 0.5em 1em;
   cursor: pointer;
+  transition: 0.25s;
+}
+
+.card-list-item:hover {
+  color: #2e6bb3;
+}
+
+.card-list-item:active {
+  color: #4A90E2;
 }
 
 input {
