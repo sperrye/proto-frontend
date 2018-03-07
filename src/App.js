@@ -6,6 +6,7 @@ import './App.css'
 import EditCardsView from './containers/EditCardsView'
 import NavBar from './components/shared/NavBar'
 import AddCardModal from './components/modals/AddCardModal'
+import ProjectsScreen from './containers/ProjectsScreen';
 
 const App = () => (
 
@@ -13,10 +14,11 @@ const App = () => (
 
       <Route exact path='/' component={ props =>
         <div className="route-wrapper">
-          
+
           <AddCardModal />
-          <NavBar />
-          <EditCardsView />
+          <NavBar />{/*
+          <EditCardsView />*/}
+          <ProjectsScreen/>
 
         </div>
       }/>
