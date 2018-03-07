@@ -9,15 +9,17 @@ const CardList = ({ projectCards }) => {
       { projectCards.all.map((el, i) => {
         //get title content
         for(var j in el.properties){
-          if(el.properties[j].name === 'title'){
-            return <CardListItem name={el.properties[j].content} key={i} />
+          if(el.properties[j].name === 'Title'){
+            return <CardListItem name={el.properties[j].content}
+            selected={el.is_selected}
+            key={i}
+            dataid={el._id} />
           }
         }
       })}
     </div>
   )
 }
-
 
 const mapStateToProps = state => ({
   projectCards: state.projectCards

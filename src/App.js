@@ -6,22 +6,26 @@ import './App.css'
 import EditCardsView from './containers/EditCardsView'
 import NavBar from './components/shared/NavBar'
 import AddCardModal from './components/modals/AddCardModal'
-import ProjectsScreen from './containers/ProjectsScreen';
+import DeleteCardsModal from './components/modals/DeleteCardsModal'
 
 const App = () => (
 
   <Router>
+    <div className="height100">
 
       <Route exact path='/' component={ props =>
         <div className="route-wrapper">
 
+          <DeleteCardsModal />
           <AddCardModal />
-          <NavBar />{/*
-          <EditCardsView />*/}
-          <ProjectsScreen/>
+          <NavBar />
+          <EditCardsView />
 
         </div>
       }/>
+
+
+    </div>
 
   </Router>
 
@@ -34,4 +38,5 @@ const mapDispatchToProps = state => ({})
 export default connect(
   mapStateToProps,
   mapDispatchToProps
+                       
 )(App)

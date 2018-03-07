@@ -15,13 +15,18 @@ class AddCardModal extends Component {
     e.preventDefault()
 
     let newCardTitle = document.querySelector('#card-title').value
-    let newCardQuantity = document.querySelector('#card-quantity').value
+    let newCardQuantity = parseInt(document.querySelector('#card-quantity').value, 10)
 
-    const newCard = {
-      project_id: 1,
-      quantity: newCardQuantity,
-      properties: [
-        { name: 'title', field_id: '1', content: newCardTitle }
+    // temporary hard code for development
+    let newCard = {
+      "projectId": "5a861f6ef36d2873fccf8312",
+      "quantity": newCardQuantity,
+      "properties": [
+        {
+          "name": "Title",
+          "fieldId": "A",
+          "content": newCardTitle
+        }
       ]
     }
 
