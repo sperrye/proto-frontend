@@ -7,6 +7,7 @@ import EditCardsView from './containers/EditCardsView'
 import NavBar from './components/shared/NavBar'
 import AddCardModal from './components/modals/AddCardModal'
 import DeleteCardsModal from './components/modals/DeleteCardsModal'
+import NewProjectScreen from './containers/NewProjectScreen';
 
 const App = () => (
 
@@ -23,7 +24,11 @@ const App = () => (
 
         </div>
       }/>
-
+      <Route exact path='/newproject' component={ props =>
+        <div className="route-wrapper">
+          <NewProjectScreen />
+        </div>
+      }/>
 
     </div>
 
@@ -38,5 +43,5 @@ const mapDispatchToProps = state => ({})
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-                       
+
 )(App)
