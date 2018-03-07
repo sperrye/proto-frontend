@@ -16,6 +16,7 @@
   height: 837px;
   width: 648px;
   padding: 40px;
+  box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.4);
 }
 
 .card-row {
@@ -47,6 +48,7 @@
   margin: 2em auto;
   cursor: pointer;
   width: 200px;
+  box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.4);
 }
 
 @media print {
