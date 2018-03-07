@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker'
 import './index.css'
 import './css/navigation.css'
 import './css/editview.css'
+import './css/printpreview.css'
 import './css/modal.css'
 
 import store from './store'
