@@ -1,6 +1,7 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { Link, Redirect } from 'react-router-dom'
 import { selectCard, selectAllCards, unselectAllCards } from '../../actions'
 
 const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCards } ) => {
@@ -12,15 +13,6 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
     let clearQuantity = document.querySelector('#card-quantity')
     clearTitle.value = ''
     clearQuantity.value = ''
-  }
-
-  const openDeleteModal = () => {
-    const selectedCards = projectCards.all.filter(el => {
-      return el.is_selected === true
-    })
-
-    const modalDeleteCards = document.querySelector('.modal-delete-cards')
-    modalDeleteCards.classList.remove('hide')
   }
 
   const selectAll = () => {
@@ -37,6 +29,15 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
       return el
     })
     unselectAllCards(allCardsUnselected)
+  }
+
+  const openDeleteModal = () => {
+    const selectedCards = projectCards.all.filter(el => {
+      return el.is_selected === true
+    })
+
+    const modalDeleteCards = document.querySelector('.modal-delete-cards')
+    modalDeleteCards.classList.remove('hide')
   }
 
   return (
@@ -58,10 +59,12 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
         <i className="material-icons">delete</i>
         <span>Delete Selected</span>
       </div>
-      <div className="local-action">
-        <i className="material-icons">print</i>
-        <span>Print Preview</span>
-      </div>
+      <Link to="/print-preview">
+        <div className="local-action">
+          <i className="material-icons">print</i>
+          <span>Print Preview</span>
+        </div>
+      </Link>
     </div>
   )
 }
