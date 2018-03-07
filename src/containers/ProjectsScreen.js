@@ -5,12 +5,12 @@ import '../css/projects.css'
 
 /* Example of projects screen with existing projects displayed as thumbnails */
 const projects = [
-/*  {
-    'name': 'Gnome Masters'
-  },
-  {
-    'name': 'Epic Tokens Deck'
-  } */
+  // {
+  //   'name': 'Gnome Masters'
+  // },
+  // {
+  //   'name': 'Epic Tokens Deck'
+  // }
 ];
 
 class ProjectsScreen extends Component {

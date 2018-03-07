@@ -12,6 +12,7 @@ import AddCardModal from './components/modals/AddCardModal'
 import DeleteCardsModal from './components/modals/DeleteCardsModal'
 import PrintPreview from './containers/PrintPreview.js'
 import PrintSidebar from './containers/PrintSidebar'
+import NewProjectScreen from './containers/NewProjectScreen';
 import Print from './containers/Print.js'
 
 const App = () => (
@@ -44,6 +45,11 @@ const App = () => (
             <PrintSidebar />
             <PrintPreview />
           </div>
+
+      <Route exact path='/newproject' component={ props =>
+        <div className="route-wrapper">
+          <NewProjectScreen />
+
         </div>
       }/>
 
@@ -64,4 +70,5 @@ const mapDispatchToProps = state => ({})
 export default connect(
   mapStateToProps,
   mapDispatchToProps
+
 )(App)
