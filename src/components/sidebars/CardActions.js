@@ -62,7 +62,7 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
       <Link to="/print-preview">
         <div className="local-action">
           <i className="material-icons">print</i>
-          <span>Print Preview</span>
+          <span>Print Prep</span>
         </div>
       </Link>
     </div>

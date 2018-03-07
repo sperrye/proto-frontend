@@ -12,6 +12,7 @@ import AddCardModal from './components/modals/AddCardModal'
 import DeleteCardsModal from './components/modals/DeleteCardsModal'
 import PrintPreview from './containers/PrintPreview.js'
 import PrintSidebar from './containers/PrintSidebar'
+import Print from './containers/Print.js'
 
 const App = () => (
 
@@ -37,13 +38,17 @@ const App = () => (
       }/>
 
       <Route exact path='/print-preview' component={ props =>
-        <div className="route-wrapper print-route">
+        <div className="print-route">
           <NavBar />
           <div className="print-preview-container">
             <PrintSidebar />
             <PrintPreview />
           </div>
         </div>
+      }/>
+
+      <Route exact path='/print' component={ props =>
+        <Print />
       }/>
 
     </div>

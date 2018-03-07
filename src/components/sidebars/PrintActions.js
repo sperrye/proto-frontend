@@ -54,15 +54,11 @@ const PrintActions = ( { projectCards, selectCard, selectAllCards, unselectAllCa
         <i className="material-icons">check_box_outline_blank</i>
         <span>Unselect All</span>
       </div>
-      <Link to="/print-preview">
-        <div className="local-action">
-          <i className="material-icons">print</i>
-          <span>Print Preview</span>
+      <Link to="/print">
+        <div className="sm-btn print-pdf">
+          <i className="material-icons mr-05 ">print</i> <span>Print Preview</span>
         </div>
       </Link>
-      <div className="sm-btn print-pdf">
-        <i className="material-icons mr-05 ">print</i> <span>Print Preview to PDF</span>
-      </div>
     </div>
   )
 }

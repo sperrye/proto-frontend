@@ -1,11 +1,28 @@
 import React from 'react'
+import { Link, Redirect } from 'react-router-dom'
 
-const PrintPreview = ({}) => {
+const Print = ({}) => {
+
+  const print = (e) => {
+    window.print()
+  }
 
   return (
-    <div className="print-preview">
+    <div className="print-background">
 
-      <div className="print-preview-page" id="printarea">
+      <Link to="/print-preview">
+        <div className="go-back">
+          <i class="material-icons mr-05">arrow_back</i>
+          <span>back to print preview</span>
+        </div>
+      </Link>
+
+      <button onClick={ print }
+        className="txt-center print-button">
+        Print now
+      </button>
+
+      <div className="" id="printarea">
         <div className="card-row">
           <div className="card-preview"></div>
           <div className="card-preview"></div>
@@ -23,7 +40,7 @@ const PrintPreview = ({}) => {
         </div>
       </div>
 
-      <div className="print-preview-page" id="printarea">
+      <div className="" id="printarea">
         <div className="card-row">
           <div className="card-preview"></div>
           <div className="card-preview"></div>
@@ -45,4 +62,4 @@ const PrintPreview = ({}) => {
   )
 }
 
-export default PrintPreview
+export default Print
