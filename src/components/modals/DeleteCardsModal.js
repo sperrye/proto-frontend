@@ -49,8 +49,8 @@ class DeleteCardsModal extends Component {
             Are you sure that you want to delete these cards?
           </div>
           <div className="mtb-2 txt-ctr">{ cardsToDelete.length ? cardsToDelete.map(el => {
-            return <span key={el._id}><i>{el.properties[0].content}, </i></span>
-          }) : <span><i>No cards selected</i></span>}</div>
+            return el.properties[0].content
+          }).join(', ') : <span><i>No cards selected</i></span>}</div>
 
           <button onClick={ this.confirmDeleteCards } className="red-bg">Yes, Delete</button>
 
