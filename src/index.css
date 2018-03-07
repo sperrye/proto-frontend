@@ -68,6 +68,15 @@ button {
  text-transform: uppercase;
  font-size: 0.9em;
  cursor: pointer;
+ transition: 0.5s;
+}
+
+button:hover {
+  background-color: #3A7BC7;
+}
+
+button:active {
+  background-color: #4A90E2;
 }
 
 .green {
