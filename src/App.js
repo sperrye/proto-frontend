@@ -45,6 +45,8 @@ const App = () => (
             <PrintSidebar />
             <PrintPreview />
           </div>
+        </div>
+      }/>
 
       <Route exact path='/newproject' component={ props =>
         <div className="route-wrapper">
