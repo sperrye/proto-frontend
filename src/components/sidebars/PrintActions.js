@@ -1,10 +1,9 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { selectCard, selectAllCards, unselectAllCards } from '../../actions'
 
-const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCards } ) => {
+const PrintActions = ( { projectCards, selectCard, selectAllCards, unselectAllCards } ) => {
 
   const openAddCardModal = () => {
     const modalAddCard = document.querySelector('.modal-add-card')
@@ -40,12 +39,12 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
     modalDeleteCards.classList.remove('hide')
   }
 
+  const printPreview = () => {
+
+  }
+
   return (
     <div className="mtb-1 card-actions">
-      <div onClick={ openAddCardModal } className="local-action">
-        <i className="material-icons">add</i>
-        <span>Add Card</span>
-      </div>
       <div onClick={ selectAll } className="local-action">
         <i className="material-icons">check_box</i>
         <span>Select All</span>
@@ -54,17 +53,6 @@ const CardActions = ( { projectCards, selectCard, selectAllCards, unselectAllCar
         <i className="material-icons">check_box_outline_blank</i>
         <span>Unselect All</span>
       </div>
-      <div onClick={ openDeleteModal }
-        className="local-action hover-red">
-        <i className="material-icons">delete</i>
-        <span>Delete Selected</span>
-      </div>
-      <Link to="/print-preview">
-        <div className="local-action">
-          <i className="material-icons">print</i>
-          <span>Print Prep</span>
-        </div>
-      </Link>
     </div>
   )
 }
@@ -80,4 +68,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CardActions)
+)(PrintActions)

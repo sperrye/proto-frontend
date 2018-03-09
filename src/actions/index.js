@@ -5,7 +5,7 @@ export const SELECT_ALL_CARDS = 'SELECT_ALL_CARDS'
 export const UNSELECT_ALL_CARDS = 'UNSELECT_ALL_CARDS'
 export const DELETE_CARDS = 'DELETE_CARDS'
 
-const baseURL = 'http://localhost:3000'
+const baseURL = 'http://localhost:3000/graphql'
 
 export function deleteCards(selectedCards){
 
@@ -44,7 +44,7 @@ export function addProjectCard(newCard){
   }`
 
   return async (dispatch) => {
-    const data = await fetch(`http://localhost:3000/graphql`, {
+    const data = await fetch(`${baseURL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -100,7 +100,7 @@ export function getProjectCards(){
   }`
 
   return async (dispatch) => {
-    const data = await fetch(`http://localhost:3000/graphql`, {
+    const data = await fetch(`${baseURL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
