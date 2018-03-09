@@ -26,6 +26,17 @@
   text-transform: uppercase;
   color: #4A90E2;
   cursor: pointer;
+  padding: 0.5em 1em;
+  transition: 0.25s;
+}
+
+.local-action:hover {
+  color: #2e6bb3;
+  background-color: #efefef;
+}
+
+.local-action:active {
+  color: #4A90E2;
 }
 
 .local-action > i,
@@ -41,6 +52,15 @@
   align-items: center;
   padding: 0.5em 1em;
   cursor: pointer;
+  transition: 0.25s;
+}
+
+.card-list-item:hover {
+  color: #2e6bb3;
+}
+
+.card-list-item:active {
+  color: #4A90E2;
 }
 
 input {
@@ -98,6 +118,23 @@ input {
   color: #4A90E2;
 }
 
+.red {
+  color: #f44336;
+}
+
+.red-bg {
+  background-color: #f44336;
+  transition: 0.5s;
+}
+
+.red-bg:hover {
+  background-color: #d32f2f;
+}
+
+.hover-red:hover {
+  color: #f44336;
+}
+
 /*==ACTIONS==*/
 
 /*==CARDLIST==*/
@@ -150,6 +187,7 @@ input {
 /*===Editable Card Container===*/
 .outline {
   border: solid 1px;
+  border-radius: 2px;
 }
 .grid {
   display: flex;
@@ -186,7 +224,7 @@ input {
   border-left: 0;
 }
 .text-col li{
-  border-bottom: solid 1px black;
+  border-bottom: solid 0px black;
 }
 .row-1 {
   height: 25px;
@@ -211,18 +249,21 @@ input {
 }
 .row-2 {
   height: 20px;
+  margin-left: 1px;
 }
 .row-2 textarea {
   height: 15px;
 }
 .row-3 {
   height: 60px;
+  margin-left: 1px;
 }
 .row-3 textarea {
   height: 55px;
 }
 .row-4 {
   height: 30px;
+  margin-left: 1px;
 }
 .right-col li {
   border-right: 0px;
@@ -240,8 +281,7 @@ input {
   border: 0;
   background: none;
   border-radius: 0px;
-  width: 100%;
-  outline: none;
+  width: 160px;
 }
 textarea {
   border: 0;
@@ -253,4 +293,24 @@ textarea {
 textarea:focus, input:focus {
   border: 0px;
   background-color: whitesmoke;
+}
+.field-button {
+  border: 0;
+  margin-bottom: -3px;
+  outline: none;
+  background: none;
+  color: black;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}
+.art-map {
+  opacity: 1;
+  border-top: solid 1px black;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-import-csv {
+  width: 100%;
 }
