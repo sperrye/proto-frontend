@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const Print = ({}) => {
+const Print = () => {
 
   const print = (e) => {
     window.print()

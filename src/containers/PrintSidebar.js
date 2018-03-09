@@ -1,6 +1,6 @@
 import React from 'react'
 // import { bindActionCreators } from 'redux'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import FilterByTags from '../components/sidebars/FilterByTags'

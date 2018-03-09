@@ -1,7 +1,6 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { Link, Redirect } from 'react-router-dom'
 import { selectCard, selectAllCards, unselectAllCards } from '../../actions'
 
 const PrintActions = ( { projectCards, selectCard, selectAllCards, unselectAllCards } ) => {

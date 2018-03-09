@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 
 import CarouselCard from '../components/editcenter/CarouselCard'
 
-const EditCenterCarousel = () => {
+const EditCenterCarousel = ({ projectCards }) => {
+  console.log(projectCards, "projectCards");
   return (
     <div className="carousel-container">
       <CarouselCard />
@@ -18,7 +19,9 @@ const EditCenterCarousel = () => {
   )
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({
+  projectCards: state.projectCards
+})
 
 const mapDispatchToProps = dispatch => ({})
 
