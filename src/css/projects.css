@@ -109,6 +109,7 @@ sub {
 .btn-import-csv {
   background-color: cornflowerblue;
   color: white;
+  width: 360px;
 }
 .btn-create-project {
   height: 3rem;

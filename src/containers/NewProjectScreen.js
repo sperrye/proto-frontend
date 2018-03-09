@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 //import NewProjectForm from '../components/modals/NewProjectForm';
 import '../css/projects.css'
 
@@ -58,7 +59,7 @@ class ProjectsScreen extends Component {
                 <input type="text" placeholder="New Project" name="project-name"/>
                 <label>2. Import CSV or start from scratch</label>
                 <p>Have data already?</p>
-                <input className="btn-import-csv" defaultValue="IMPORT CSV"/>
+                <Link to='/assignfields'><input className="btn-import-csv" defaultValue="IMPORT CSV"/></Link>
                 <sub>Learn more about importing</sub>
                 <p>Or, start a new project with blank cards:</p>
                 <input type="text" placeholder="Enter card quantity" name="blank-quantity"/>

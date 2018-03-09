@@ -13,7 +13,9 @@ import DeleteCardsModal from './components/modals/DeleteCardsModal'
 import PrintPreview from './containers/PrintPreview.js'
 import PrintSidebar from './containers/PrintSidebar'
 import NewProjectScreen from './containers/NewProjectScreen';
+import AssignFields from './components/newproject/AssignFields';
 import Print from './containers/Print.js'
+
 
 const App = () => (
 
@@ -52,6 +54,11 @@ const App = () => (
         <div className="route-wrapper">
           <NewProjectScreen />
 
+        </div>
+      }/>
+      <Route exact path='/assignfields' component={ props =>
+        <div className="route-wrapper">
+          <AssignFields />
         </div>
       }/>
 
