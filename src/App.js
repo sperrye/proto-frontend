@@ -8,6 +8,7 @@ import NavBar from './components/shared/NavBar'
 import AddCardModal from './components/modals/AddCardModal'
 import DeleteCardsModal from './components/modals/DeleteCardsModal'
 import NewProjectScreen from './containers/NewProjectScreen';
+import AssignFields from './components/newproject/AssignFields';
 
 const App = () => (
 
@@ -27,6 +28,11 @@ const App = () => (
       <Route exact path='/newproject' component={ props =>
         <div className="route-wrapper">
           <NewProjectScreen />
+        </div>
+      }/>
+      <Route exact path='/assignfields' component={ props =>
+        <div className="route-wrapper">
+          <AssignFields />
         </div>
       }/>
 
