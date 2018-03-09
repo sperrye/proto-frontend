@@ -5,16 +5,16 @@ import { connect } from 'react-redux'
 import CarouselCard from '../components/editcenter/CarouselCard'
 
 const EditCenterCarousel = ({ projectCards }) => {
-  console.log(projectCards, "projectCards");
+
+  const carouselCards = projectCards.all.filter(el => {
+    return el.is_selected === true
+  })
+
   return (
     <div className="carousel-container">
-      <CarouselCard />
-      <CarouselCard />
-      <CarouselCard />
-      <CarouselCard />
-      <CarouselCard />
-      <CarouselCard />
-      <CarouselCard />
+      { carouselCards.map(el => {
+        return <CarouselCard key={el._id} title={el.properties[0].content}/>
+      })}
     </div>
   )
 }
